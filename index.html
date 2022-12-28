@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbooks</title>
+</head>
+<script src="script.js"></script>
+<style>
+    html{
+        background-color: black;
+        color: aqua;
+    }
+    .menu{
+        font-size: x-large;
+        text-align: center;
+    }
+    .branch,.topic{
+        display: inline-block;
+    }
+    iframe{
+        width: 100%;
+        height: 600px;
+        border: none;
+        margin-top: 2px;
+    }
+    select{
+        margin: 2px;
+        text-align: center;
+        background-color: black;
+        color: cyan;
+        font-size: x-large;
+        border-radius: 10px;
+        border: 3px solid red;
+    }
+    select:focus{
+        border: 1px solid yellow;
+    }
+    @media only screen and (max-width: 385px) {
+        .branch,.topic{
+            display: block;
+        }
+        select{
+            width: 90%;
+        }
+        iframe{
+            width: 100%;
+            height: 775px;
+        }
+    }
+</style>
+<body>
+    <div class="menu">
+        <div class="branch">
+            <select id="branch" onchange="x()">
+                <option value="std1">Std.1</option>
+                <option value="std2">Std.2</option>
+                <option value="std3">Std.3</option>
+                <option value="std4">Std.4</option>
+                <option value="std5">Std.5</option>
+                <option value="std6">Std.6</option>
+                <option value="std7">Std.7</option>
+                <option value="std8">Std.8</option>
+                <option value="std9">Std.9</option>
+                <option value="std10">Std.10</option>
+                <option value="std11">Std.11</option>
+                <option value="std12">Std.12</option>
+            </select>
+        </div>
+        <div class="topic">
+            <select id="topic" onchange="z()">
+                <option value="">Maths</option>
+            </select>
+        </div>
+    </div>
+    <iframe src="Std.1/Maths/1.Maths.html" id="frame"></iframe>
+</body>
+</html>
